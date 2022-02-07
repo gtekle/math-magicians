@@ -8,21 +8,21 @@
 
 ## Built With
 
-- CSS, JavaScript (ES6), Babel, Webpack and React.js
+- CSS, JavaScript, Babel, Webpack and React.js
 
 ## Live Demo
 
-- live link will is coming soon!
+- live link is coming soon!
 
 ## Getting Started
 - Install Node.js ^12.13
 - clone the repository by running\
-    `git clone https://github.com/gtekle/todo-list.git`
+    `git clone https://github.com/gtekle/math-magicians.git`
 - navigate to the folder\
-    `cd todo-list`
+    `cd math-magicians`
 - Install packages\
     `npm install`
-- To run application using webpack-dev-server\
+- run the application\
     `npm start`
 
 ## Author
