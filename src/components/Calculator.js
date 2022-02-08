@@ -5,12 +5,18 @@ import Button from './Button';
 import calculate from '../logic/calculate';
 
 function Calculator() {
+  const [total, setTotal] = useState(null);
+  const [next, setNext] = useState(null);
+  const [operation, setOperation] = useState(null);
 
   const handleButtonClick = (name) => {
     const { total: newTotal, next: newNext, operation: newOperation } = calculate(
       { total, next, operation }, name,
     );
 
+    setTotal(newTotal);
+    setNext(newNext);
+    setOperation(newOperation);
   };
 
   return (
