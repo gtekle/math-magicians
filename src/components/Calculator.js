@@ -2,11 +2,16 @@ import { Component } from 'react';
 
 import Display from './Display';
 import Button from './Button';
+import calculate from '../logic/calculate';
 
 class Calculator extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      total: null,
+      next: null,
+      operation: null,
+    };
   }
 
   render() {
@@ -16,33 +21,33 @@ class Calculator extends Component {
           <Display />
         </div>
         <div className="row">
-          <Button name="AC" />
-          <Button name="+/-" />
-          <Button name="%" />
-          <Button className="btn btn-operator" name="/" />
+          <Button clickHandler={() => calculate(this.state, 'AC')} name="AC" />
+          <Button clickHandler={() => calculate(this.state, '+/-')} name="+/-" />
+          <Button clickHandler={() => calculate(this.state, '%')} name="%" />
+          <Button clickHandler={() => calculate(this.state, '÷')} className="btn-operator" name="÷" />
         </div>
         <div className="row">
-          <Button name="7" />
-          <Button name="8" />
-          <Button name="9" />
-          <Button className="btn btn-operator" name="x" />
+          <Button clickHandler={() => calculate(this.state, '7')} name="7" />
+          <Button clickHandler={() => calculate(this.state, '8')} name="8" />
+          <Button clickHandler={() => calculate(this.state, '9')} name="9" />
+          <Button clickHandler={() => calculate(this.state, 'x')} className="btn-operator" name="x" />
         </div>
         <div className="row">
-          <Button name="4" />
-          <Button name="5" />
-          <Button name="6" />
-          <Button className="btn-operator" name="x" />
+          <Button clickHandler={() => calculate(this.state, '4')} name="4" />
+          <Button clickHandler={() => calculate(this.state, '5')} name="5" />
+          <Button clickHandler={() => calculate(this.state, '6')} name="6" />
+          <Button clickHandler={() => calculate(this.state, '-')} className="btn-operator" name="-" />
         </div>
         <div className="row">
-          <Button name="1" />
-          <Button name="2" />
-          <Button name="3" />
-          <Button name="+" className="btn-operator" />
+          <Button clickHandler={() => calculate(this.state, '1')} name="1" />
+          <Button clickHandler={() => calculate(this.state, '2')} name="2" />
+          <Button clickHandler={() => calculate(this.state, '3')} name="3" />
+          <Button clickHandler={() => calculate(this.state, '+')} className="btn-operator" name="+" />
         </div>
         <div className="row">
-          <Button className="btn-zero" name="0" />
-          <Button name="." />
-          <Button name="=" className="btn-operator" />
+          <Button clickHandler={() => calculate(this.state, '0')} className="btn-zero" name="0" />
+          <Button clickHandler={() => calculate(this.state, '.')} name="." />
+          <Button clickHandler={() => calculate(this.state, '=')} name="=" className="btn-operator" />
         </div>
       </div>
     );
