@@ -28,7 +28,7 @@ class Calculator extends Component {
     return (
       <div className="calculator-container">
         <div className="row">
-          <Display />
+          <Display text={next || operation || total} />
         </div>
         <div className="row">
           <Button clickHandler={handleButtonClick} name="AC" />
