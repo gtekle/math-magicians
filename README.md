@@ -12,7 +12,7 @@
 
 ## Live Demo
 
-- live link is coming soon!
+- [live link](https://math-magicians-tek.netlify.app/)
 
 ## Getting Started
 - Install Node.js ^12.13
