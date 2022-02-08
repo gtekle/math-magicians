@@ -15,39 +15,49 @@ class Calculator extends Component {
   }
 
   render() {
+    const handleButtonClick = (name) => {
+      const { total, next, operation } = calculate(this.state, name);
+      this.setState({
+        total,
+        next,
+        operation,
+      });
+    };
+    const { total, next, operation } = this.state;
+
     return (
       <div className="calculator-container">
         <div className="row">
           <Display />
         </div>
         <div className="row">
-          <Button clickHandler={() => calculate(this.state, 'AC')} name="AC" />
-          <Button clickHandler={() => calculate(this.state, '+/-')} name="+/-" />
-          <Button clickHandler={() => calculate(this.state, '%')} name="%" />
-          <Button clickHandler={() => calculate(this.state, '÷')} className="btn-operator" name="÷" />
+          <Button clickHandler={handleButtonClick} name="AC" />
+          <Button clickHandler={handleButtonClick} name="+/-" />
+          <Button clickHandler={handleButtonClick} name="%" />
+          <Button clickHandler={handleButtonClick} className="btn-operator" name="÷" />
         </div>
         <div className="row">
-          <Button clickHandler={() => calculate(this.state, '7')} name="7" />
-          <Button clickHandler={() => calculate(this.state, '8')} name="8" />
-          <Button clickHandler={() => calculate(this.state, '9')} name="9" />
-          <Button clickHandler={() => calculate(this.state, 'x')} className="btn-operator" name="x" />
+          <Button clickHandler={handleButtonClick} name="7" />
+          <Button clickHandler={handleButtonClick} name="8" />
+          <Button clickHandler={handleButtonClick} name="9" />
+          <Button clickHandler={handleButtonClick} className="btn-operator" name="x" />
         </div>
         <div className="row">
-          <Button clickHandler={() => calculate(this.state, '4')} name="4" />
-          <Button clickHandler={() => calculate(this.state, '5')} name="5" />
-          <Button clickHandler={() => calculate(this.state, '6')} name="6" />
-          <Button clickHandler={() => calculate(this.state, '-')} className="btn-operator" name="-" />
+          <Button clickHandler={handleButtonClick} name="4" />
+          <Button clickHandler={handleButtonClick} name="5" />
+          <Button clickHandler={handleButtonClick} name="6" />
+          <Button clickHandler={handleButtonClick} className="btn-operator" name="-" />
         </div>
         <div className="row">
-          <Button clickHandler={() => calculate(this.state, '1')} name="1" />
-          <Button clickHandler={() => calculate(this.state, '2')} name="2" />
-          <Button clickHandler={() => calculate(this.state, '3')} name="3" />
-          <Button clickHandler={() => calculate(this.state, '+')} className="btn-operator" name="+" />
+          <Button clickHandler={handleButtonClick} name="1" />
+          <Button clickHandler={handleButtonClick} name="2" />
+          <Button clickHandler={handleButtonClick} name="3" />
+          <Button clickHandler={handleButtonClick} className="btn-operator" name="+" />
         </div>
         <div className="row">
-          <Button clickHandler={() => calculate(this.state, '0')} className="btn-zero" name="0" />
-          <Button clickHandler={() => calculate(this.state, '.')} name="." />
-          <Button clickHandler={() => calculate(this.state, '=')} name="=" className="btn-operator" />
+          <Button clickHandler={handleButtonClick} className="btn-zero" name="0" />
+          <Button clickHandler={handleButtonClick} name="." />
+          <Button clickHandler={handleButtonClick} name="=" className="btn-operator" />
         </div>
       </div>
     );

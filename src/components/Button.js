@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types';
 
 function Button(props) {
-  console.log(props);
   const { name, className, clickHandler } = props;
-  return <button onClick={clickHandler} className={className} type="button">{name}</button>;
+  return <button onClick={() => clickHandler(name)} className={className} type="button">{name}</button>;
 }
 
 Button.propTypes = {
