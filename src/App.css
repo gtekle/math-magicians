@@ -6,16 +6,16 @@
 }
 
 .title-text {
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
 }
 
 .nav-list {
   display: flex;
   justify-content: flex-end;
   list-style: none;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
 }
 
 .list-item {
@@ -36,7 +36,7 @@
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  padding: 120px 0px;
+  padding: 120px 0;
 }
 
 .heading-text {
