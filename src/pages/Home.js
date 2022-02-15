@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Home = () => (
-  <>
+  <div className="home-section-container">
     <h2 className="heading-text">
       Welcome to our page!
     </h2>
@@ -15,7 +15,7 @@ const Home = () => (
       Animi cumque sit quaerat cum, ratione soluta! Eveniet, magnam
       eum ea excepturi et temporibus laborum at officia!
     </p>
-  </>
+  </div>
 );
 
 export default Home;
