@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { Routes, Route } from 'react-router-dom';
 
 import './App.css';
 import Home from './pages/Home';
@@ -16,9 +17,11 @@ class App extends Component {
     return (
       <>
         <Header />
-        <CalculatorPage />
-        <Home />
-        <Quote />
+        <Routes>
+          <Route path="/" exact element={<Home />} />
+          <Route path="calculator" element={<CalculatorPage />} />
+          <Route path="quote" element={<Quote />} />
+        </Routes>
       </>
     );
   }
