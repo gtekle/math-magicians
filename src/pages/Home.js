@@ -2,7 +2,7 @@ import React from 'react';
 
 const Home = () => (
   <>
-    <h2 className="welcome-text">
+    <h2 className="heading-text">
       Welcome to our page!
     </h2>
     <p>

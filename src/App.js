@@ -1,7 +1,10 @@
 import { Component } from 'react';
 
 import './App.css';
-import Calculator from './components/Calculator';
+import Home from './pages/Home';
+import Quote from './pages/Quote';
+import CalculatorPage from './pages/CalculatorPage';
+import Header from './pages/Header';
 
 class App extends Component {
   constructor(props) {
@@ -10,7 +13,14 @@ class App extends Component {
   }
 
   render() {
-    return <Calculator />;
+    return (
+      <>
+        <Header />
+        <CalculatorPage />
+        <Home />
+        <Quote />
+      </>
+    );
   }
 }
 
