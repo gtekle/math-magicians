@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 function Display(props) {
   const { text } = props;
   return (
-    <div className="display">{text || 0}</div>
+    <div role="display" className="display">{text || 0}</div>
   );
 }
 
