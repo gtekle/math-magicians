@@ -1,4 +1,4 @@
-import operate from './operate.js';
+import operate from '../logic/operate';
 
 describe("test operate function", () => {
   test('test 1 + 2 is 3', () => { 

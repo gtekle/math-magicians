@@ -10,9 +10,11 @@ function Calculator() {
   const [operation, setOperation] = useState(null);
 
   const handleButtonClick = (name) => {
-    const { total: newTotal, next: newNext, operation: newOperation } = calculate(
-      { total, next, operation }, name,
-    );
+    const { 
+      total: newTotal, 
+      next: newNext, 
+      operation: newOperation 
+    } = calculate({ total, next, operation }, name,);
 
     setTotal(newTotal);
     setNext(newNext);
