@@ -12,7 +12,8 @@
 
 ## Live Demo
 
-- [live link](https://math-magicians-tek.netlify.app/)
+- [live link on netlify](https://math-magicians-tek.netlify.app/)
+- [live link on heroku](https://math-magicians-tek.herokuapp.com/)
 
 ## Getting Started
 - Install Node.js ^12.13
